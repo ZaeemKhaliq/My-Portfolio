@@ -36,3 +36,266 @@
     transform: rotate(360deg);
   }
 }
+
+::selection {
+  background: rgba(166, 175, 189, 0.3);
+}
+
+:-webkit-any(article,aside,nav,section) h1 {
+  font-size: 2em;
+}
+
+
+
+
+#instagram {
+  position: relative;
+  border-radius: 20%;
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf)
+}
+#instagram:after,
+#instagram:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+  content: ''
+}
+#instagram:before {
+  border-radius: 20%
+}
+#instagram:after {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%
+}
+
+.intro{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://i.ibb.co/554JxZ0/dark.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:557px;
+}
+
+.mobintro{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('https://i.ibb.co/554JxZ0/dark.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:400px;
+}
+
+
+#resume{
+  height:60px;
+  width:170px;
+  font-weight: bolder;
+  font-family: 'Roboto';
+  border-radius: 30px;
+  cursor:pointer;
+  background-color: transparent;
+  color:white;
+  border:2px solid white;
+  transition: 0.5s;
+  outline: none;
+  font-size: 14px;
+}
+
+#resume:hover{
+  background-color: white;
+  color:black;
+}
+
+#pic1{
+  height: 250px;
+  width: 320px;
+  image-rendering: -webkit-optimize-contrast;
+  transition: .5s ease;
+}
+
+
+#mobpic1{
+  height: 100%;
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+  transition: .5s ease;
+}
+
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  transform: translate(-0%, -100%);
+  top:50%;
+  left:50%;
+  transition: .5s ease;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+.container{
+  height: 255px;
+}
+
+.container:hover #pic1{
+  opacity: 0.3;
+}
+
+.container:hover .overlay{
+  opacity: 1;
+}
+
+.mobcontainer{
+  height: 220px;
+  width: 100%;
+}
+
+.mobcontainer:hover #mobpic1{
+  opacity: 0.3;
+}
+
+.mobcontainer:hover .overlay{
+  opacity: 1;
+}
+
+
+
+.text{
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+}
+
+
+.navBarChanged {
+  background-color: white !important;
+  color: black !important;
+  transition: .3s ease;
+  transition-property: background-color;
+}
+
+
+
+#navBar{
+  transition: .3s ease;
+}
+
+#name{
+  height:30px;
+  width:300px;
+  outline: none;
+  border-radius: 0;
+  border: 1px solid rgba(0,0,0,.2);
+  font-family: 'Montserrat';
+  padding:8px;
+  font-size:16px;
+}
+
+#email{
+  height:30px;
+  width:300px;
+  outline: none;
+  border-radius: 0;
+  border: 1px solid rgba(0,0,0,.2);
+  font-family: 'Montserrat';
+  padding:8px;
+  font-size:16px;
+}
+
+#message{
+  outline:none;
+  border-radius:0;
+  border: 1px solid rgba(0,0,0,.2);
+  font-family: 'Montserrat';
+  padding:8px;
+  font-size:16px;
+}
+
+#name:hover,#name:focus{
+  border: 1px solid rgba(0,0,0,1);
+}
+
+#email:hover,#email:focus{
+  border: 1px solid rgba(0,0,0,1);
+}
+
+#message:hover, #message:focus{
+  border: 1px solid rgba(0,0,0,1);
+}
+
+#submitBut {
+  height: 55px;
+  width: 250px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  border:none;
+  transition: .2s ease;
+  border: 2px solid black;
+  font-family: 'Montserrat';
+  font-size: 16px;
+}
+
+#submitBut:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+#contactDiv {
+ background: url('https://i.ibb.co/fQYWk0h/Pik-Png-com-ornate-frame-png-805162.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100%;
+}
+
+#scrollTopBut{
+  position: absolute;
+  right:30px;
+  bottom:20px;
+  background-color: black;
+  border: 2px solid black;
+  outline: none;
+  color:white;
+  border-radius: 4px;
+  cursor:pointer;
+  transition: .3s ease;
+}
+
+#scrollTopBut:hover{
+  background-color: white;
+  color:black;
+}
+
+#mobscrollTopBut {
+  position: absolute;
+  right:10px;
+  bottom:10px;
+  background-color: black;
+  border: 2px solid black;
+  outline: none;
+  color:white;
+  border-radius: 4px;
+  cursor:pointer;
+  transition: .3s ease;
+}
+
+#mobscrollTopBut:hover{
+  background-color: white;
+  color:black;
+}
+
+#ipfield{
+  padding: 8px;
+  font-size: 16px;
+}
+
+
