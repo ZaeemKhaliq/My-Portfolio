@@ -217,7 +217,7 @@ export default function Body(){
                     </div>
                     <div style={screen > 800 ? {width:'750px',margin:'0 auto'} : {margin:'0 auto'}}>
                         <form onSubmit={handleSubmit} method="POST">
-                            <div style={screen > 800 ? {display:'flex',justifyContent:'space-between'} : {display:'flex',justifyContent:'space-between',flexDirection:'column',textAlign:'center'}}>
+                            <div style={screen > 800 ? {display:'flex',justifyContent:'space-between'} : {display:'flex',justifyContent:'space-between',flexDirection:'column',textAlign:'center'}} className="name-email-division">
                                 <div>
                                     <label style={{fontFamily:'Montserrat',fontWeight:'bolder'}}>Name</label>
                                     <br></br>
@@ -233,13 +233,13 @@ export default function Body(){
                             </div>
                             <br></br>
 
-                            <div style={screen > 800 ? null : {textAlign:'center'}}>
+                            <div style={screen > 800 ? null : {textAlign:'center'}} className="message-division">
                             <label style={{fontFamily:'Montserrat',fontWeight:'bolder'}}>Message</label>
                             <br></br>
                             {screen > 800 ?
-                            <textarea cols="80" rows="10" id="message" name="message" value={details.message || ''} onChange={handleChange} placeholder="Your Message..." ></textarea>
+                            <textarea id="message" name="message" value={details.message || ''} onChange={handleChange} placeholder="Your Message..." ></textarea>
                             :
-                            <textarea cols="32" rows="10" id="message" name="message" value={details.message || ''} onChange={handleChange} placeholder="Your Message..." ></textarea>
+                            <textarea id="message" name="message" value={details.message || ''} onChange={handleChange} placeholder="Your Message..." ></textarea>
                             }
                             </div>
                             
