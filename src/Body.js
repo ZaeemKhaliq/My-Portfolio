@@ -106,7 +106,7 @@ export default function Body(){
 
     return (
         <main>
-            <section className={screen > 800 ? "intro" : "mobintro"} style={{paddingTop:100}}>
+            <section className={screen > 800 ? "intro" : "mobintro"} style={{paddingTop:100}} id="intro">
                 
                 <div style={screen > 800 ? {width:'90%',margin:'150px auto'} : {width:'90%',margin:'50px auto'}}>
                     <p style={{fontSize:screen > 800 ? 26 : 20,color:'white',textAlign:'center',fontFamily:'Montserrat',fontWeight:'400'}}>Hello! Welcome to My Portfolio</p>
@@ -147,7 +147,7 @@ export default function Body(){
 
 
 
-            <section className="projects" style={{backgroundColor:'rgb(243, 243, 243)',paddingTop:1,paddingBottom:30}}>
+            <section className="projects" style={{backgroundColor:'rgb(243, 243, 243)',paddingTop:1,paddingBottom:30}} id="projects">
                 <div>
                     <div style={{textAlign:'center'}}>
                         <h1 style={{fontFamily:'Nunito',display:'inline-block',borderBottom:'3px solid black'}}>PROJECTS</h1>
@@ -182,7 +182,7 @@ export default function Body(){
             </section>
 
 
-            <section className="skills" style={screen > 800 ? {backgroundColor:'white',height:'auto',paddingTop:30,minHeight:530,paddingBottom:30} : {backgroundColor:'white',height:'auto',paddingTop:30,minHeight:350,paddingBottom:30}}>
+            <section className="skills" style={screen > 800 ? {backgroundColor:'white',height:'auto',paddingTop:30,minHeight:530,paddingBottom:30} : {backgroundColor:'white',height:'auto',paddingTop:30,minHeight:350,paddingBottom:30}} id="skills">
                 <div style={{textAlign:'center'}}>
                     <h1 style={{fontFamily:'Nunito',display:'inline-block',borderBottom:'3px solid black'}}>SKILLS</h1>
                 </div>
@@ -207,7 +207,7 @@ export default function Body(){
                 </div>
             </section>
 
-            <section className="contact" style={{backgroundColor:'rgb(243, 243, 243)',paddingTop:1,paddingBottom:30,height:screen>800 ? 755: 670}}>
+            <section className="contact" style={{backgroundColor:'rgb(243, 243, 243)',paddingTop:1,paddingBottom:30,height:screen>800 ? 755: 670}} id="contact">
                 <div id={screen > 800 ? "contactDiv" : null}>
                    
                     <div style={{textAlign:'center'}}>

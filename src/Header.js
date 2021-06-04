@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 export default function Header(){
 
     const [screen,setScreen] = useContext(MobContext);
-    console.log(screen);
+    
 
     const [color,setColor] = useState('white');
     const [display,setDisplay] = useState('none');
@@ -18,7 +18,7 @@ export default function Header(){
     const [display3,setDisplay3] = useState('none');
     const [display4,setDisplay4] = useState('none');
     
-    console.log(display);
+   
 
     useEffect(()=>{
        
@@ -144,61 +144,32 @@ export default function Header(){
         position: 'fixed'
     };
 
-    const redirect = (num) => {
-        if(num==0){
-            window.scrollTo({
-                top: 0,
-                behavior:'smooth'
-            })
-        }
-        if(num==1){
-            window.scrollTo({
-                top: screen > 800 ? 557 : 440,
-                behavior:'smooth'
-            })
-        }
-        if(num==2){
-            window.scrollTo({
-                top: screen > 800 ? 1116 : 1000,
-                behavior:'smooth'
-            })
-        }
-        if(num==3){
-            window.scrollTo({
-                top: screen > 800 ? 1710 : 2240,
-                behavior:'smooth'
-            })
-        }
-        if(num==4){
-            window.scrollTo({
-                top: screen > 800 ? 2280 : 2750,
-                behavior:'smooth'
-            })
-        }
-   }
-
-   
 
     const buttons = [{
         name: 'Home',
         id: 0,
-        display: display
+        display: display,
+        element: 'intro'
     },{
         name: 'About',
         id: 1,
-        display: display1
+        display: display1,
+        element: 'about'
     },{
         name: 'Projects',
         id: 2,
-        display: display2
+        display: display2,
+        element: 'projects'
     },{
         name: 'Skills',
         id: 3,
-        display: display3
+        display: display3,
+        element: 'skills'
     },{
         name: 'Contact Me',
         id: 4,
-        display: display4
+        display: display4,
+        element: 'contact'
     }];
 
 
@@ -214,6 +185,13 @@ export default function Header(){
         setAnchorEl(null);
     };
 
+
+    const handleScroll = (element) => {
+      
+        var item = document.getElementById(`${element}`);
+       
+        window.scrollTo(0,item.offsetTop - document.getElementById('navBar').offsetHeight);
+    }
     
 
     return (
@@ -233,7 +211,7 @@ export default function Header(){
                     return (
                         <>
                             <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-                                <Button style={{color:color}} onClick={()=>redirect(button.id)}>{button.name}</Button>
+                                <Button style={{color:color}} onClick={()=>handleScroll(button.element)}>{button.name}</Button>
                                 <FiberManualRecordIcon style={{color:color,fontSize:14,display:button.display}} />
                             </div>
                         </>
@@ -258,12 +236,12 @@ export default function Header(){
                 >
                     {buttons.map(button => {
                         return(
-                            <>
+                                
                                 <MenuItem onClick={()=>{
-                                    redirect(button.id)
+                                    handleScroll(button.element)
                                     handleClose()
                                 }}>{button.name}</MenuItem>
-                            </>
+                            
                         );
                     })}
                 </Menu>
