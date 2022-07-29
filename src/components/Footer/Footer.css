@@ -1,0 +1,50 @@
+.footer {
+  display: grid;
+  row-gap: 1rem;
+  background-color: rgb(255 245 198);
+  place-items: center;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.footer__social-icons {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1rem;
+}
+
+.footer__copyrights-container {
+  display: grid;
+  place-items: center;
+  row-gap: 0.5rem;
+}
+
+.footer__scroll-to-top-button {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  background-color: black;
+  border: 2px solid black;
+  outline: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer__scroll-to-top-button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__scroll-to-top-button {
+    right: 10px;
+  }
+}
